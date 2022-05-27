@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+Cache-control: no-cache="set-cookie"
+Content-Type: application/json; charset=utf-8
+
+{"result":"success","pay_url":"https:\/\/cryptocloud.plus\/pay\/DZLF42","currency": "BTC","invoice_id":"DZLF42"}

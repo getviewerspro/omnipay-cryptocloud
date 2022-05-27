@@ -1,0 +1,32 @@
+{
+    "name": "getviewerspro/omnipay-cryptocloud",
+    "description": "CryptoCloud gateway for Omnipay",
+    "type": "library",
+    "require": {
+        "omnipay/common": "^3.0",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\CryptoCloud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "getviewerspro",
+            "email": "team@getviewers.pro"
+        }
+    ],
+    "keywords": [
+        "cryptocloud",
+        "api",
+        "payment",
+        "omnipay"
+    ],
+    "homepage": "https://github.com/getviewerspro/omnipay-cryptocloud",
+    "require-dev": {
+        "omnipay/tests": "^3.0",
+        "phpunit/phpunit": "^8.0"
+    }
+}
