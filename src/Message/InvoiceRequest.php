@@ -53,6 +53,8 @@ class InvoiceRequest extends AbstractRequest
     {
         $data = $this->parameters->all();
 
+        info($data);
+
         return [
             'shop_id' => $data['shop_id'],
             'amount' => $data['amount'],
