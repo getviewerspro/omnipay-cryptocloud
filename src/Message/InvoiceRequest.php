@@ -43,7 +43,8 @@ class InvoiceRequest extends AbstractRequest
     private function prepareRequest()
     {
         $this->setHeaders([
-            "Authorization" => 'Token '.$this->getApiKey()
+            "Authorization" => 'Token '.$this->getApiKey(),
+            "Content-Type"  => "application/x-www-form-urlencoded"
         ]);
 
         return $this;
