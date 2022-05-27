@@ -18,6 +18,7 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return [
+            'shop_id' => '',
         ];
     }
 
