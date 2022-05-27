@@ -24,6 +24,25 @@ abstract class AbstractRequest extends Request
         return $this->getParameter('headers');
     }
 
+    public function setShopId($value)
+    {
+        return $this->setParameter("shop_id", $value);
+    }
+
+    public function getShopId()
+    {
+        return $this->getParameter("shop_id");
+    }
+    public function setEmail($value)
+    {
+        return $this->setParameter("email", $value);
+    }
+
+    public function getEmail()
+    {
+        return $this->getParameter("email");
+    }
+
     public function setApiKey($value)
     {
         return $this->setParameter("apiKey",$value);
