@@ -21,9 +21,28 @@ class Gateway extends AbstractGateway
         ];
     }
 
+    public function setShopId($value)
+    {
+        return $this->setParameter("shop_id", $value);
+    }
+
+    public function getShopId()
+    {
+        return $this->getParameter("shop_id");
+    }
+    public function setEmail($value)
+    {
+        return $this->setParameter("email", $value);
+    }
+
+    public function getEmail()
+    {
+        return $this->getParameter("email");
+    }
+
     public function setApiKey($value)
     {
-        return $this->setParameter("apiKey",$value);
+        return $this->setParameter("apiKey", $value);
     }
 
     public function getApiKey()
