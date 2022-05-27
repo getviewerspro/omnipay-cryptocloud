@@ -64,6 +64,41 @@ abstract class AbstractRequest extends Request
         return $this->sendData($result);
     }
 
+    /**
+     * Send data to the remote gateway, parse the result into an array,
+     * then use that to instantiate the response object.
+     *
+     * @param  array
+     * @return Response The reponse object initialised with the data returned from the gateway.
+     */
+    public function sendData($data)
+    {
+        // Issue #20 no data values should be null.
+
+        array_walk($data, function (&$value) {
+            if (! isset($value)) {
+                $value = '';
+            }
+        });
+
+        $httpResponse = $this
+            ->httpClient
+            ->request(
+                'POST',
+                $this->getEndpoint(),
+                [
+                    'Content-Type' => 'application/x-www-form-urlencoded',
+                ],
+                http_build_query($data)
+            );
+
+        // We might want to check $httpResponse->getStatusCode()
+
+        $responseData = static::parseBodyData($httpResponse);
+
+        return $this->createResponse($responseData);
+    }
+
     protected function getClient($data)
     {
         return $this->httpClient->request(
