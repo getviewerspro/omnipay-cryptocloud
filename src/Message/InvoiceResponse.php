@@ -13,8 +13,8 @@ class InvoiceResponse extends AbstractResponse implements RedirectResponseInterf
 
         $result = false;
 
-        if (isset($this->data['result'])) {
-            if ($this->data['result'] == 'success') {
+        if (isset($this->data['status'])) {
+            if ($this->data['status'] == 'success') {
                 $result = true;
             }
         }
