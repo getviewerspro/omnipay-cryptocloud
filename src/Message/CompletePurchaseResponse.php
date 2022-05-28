@@ -37,6 +37,11 @@ class CompletePurchaseResponse extends AbstractResponse
         }
     }
 
+    public function send()
+    {
+        return $this;
+    }
+
     public function isSuccessful()
     {
         return true;
