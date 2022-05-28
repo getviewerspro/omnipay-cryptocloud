@@ -21,8 +21,6 @@ class CompletePurchaseRequest extends AbstractRequest
      */
     public function getData()
     {
-        $this->validate('sign_2');
-
         return $this->httpRequest->request->all();
     }
 
