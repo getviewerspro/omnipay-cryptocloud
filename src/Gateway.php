@@ -19,6 +19,7 @@ class Gateway extends AbstractGateway
     {
         return [
             'shop_id' => '',
+            'amount' => '',
         ];
     }
 
