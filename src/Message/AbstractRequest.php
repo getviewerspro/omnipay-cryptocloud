@@ -53,17 +53,6 @@ abstract class AbstractRequest extends Request
         return $this->getParameter("apiKey");
     }
 
-    public function send()
-    {
-        $data = $this->getData();
-
-        $response = $this->getClient($data);
-
-        $result = json_decode($response->getBody()->getContents(),1);
-
-        return $this->sendData($result);
-    }
-
     /**
      * Send data to the remote gateway, parse the result into an array,
      * then use that to instantiate the response object.
